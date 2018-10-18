@@ -1,0 +1,26 @@
+Doubly Connected Edge List
+
+	Vertices (index, location, incident edge)
+	v0 (1.00, 2.00) nil (Site)
+	v1 (0.00, 1.00) nil (Site)
+	v2 (2.00, 1.00) nil (Site)
+	v3 (1.00, 1.00) e8 
+	v4 (1.00, 0.00) nil (Site)
+
+	Edges (index, origin, twin, next, prev, face)
+	e0 v3 e1 nil nil f1
+	e1 nil e0 e3 nil f0
+	e2 nil e3 e4 nil f2
+	e3 v3 e2 nil nil f0
+	e4 v3 e5 e8 nil f1
+	e5 v3 e4 e0 nil f2
+	e6 v3 e7 nil nil f3
+	e7 nil e6 e5 nil f1
+	e8 v3 e9 nil nil f3
+	e9 nil e8 e6 nil f2
+
+	Faces (index, inner component, outer component)
+	f0 nil e1
+	f1 nil e0
+	f2 nil e2
+	f3 nil e6

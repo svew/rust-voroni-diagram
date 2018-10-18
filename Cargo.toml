@@ -1,0 +1,9 @@
+[package]
+name = "voroni"
+version = "0.1.0"
+authors = ["Walter <wsve1501@iastate.edu>"]
+
+[dependencies]
+glium = "*"
+ordered-float = "0.5.0"
+rand = "*"
